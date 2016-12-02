@@ -11,12 +11,13 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
+import android.content.Intent;
 
 public class Main3Activity extends AppCompatActivity {
     Switch s1;
     RadioGroup rg;
     ImageView i1;
-    Button b1,b2;
+    Button b1,b2, b3;
     LinearLayout l1;
     RadioButton r1, r2, r3;
     @Override
@@ -33,6 +34,7 @@ public class Main3Activity extends AppCompatActivity {
         r1 = (RadioButton) findViewById(R.id.radioButton1);
         r2 = (RadioButton) findViewById(R.id.radioButton2);
         r3 = (RadioButton) findViewById(R.id.radioButton3);
+        b3 = (Button) findViewById(R.id.button3);
 
         l1.setVisibility(View.INVISIBLE);
 
@@ -42,6 +44,24 @@ public class Main3Activity extends AppCompatActivity {
                 if (isChecked) l1.setVisibility(View.VISIBLE);
                 else
                     l1.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                s1.setChecked(false);
+                l1.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(
+                        getApplicationContext(), // 현재 화면의 제어권자
+                        Main4Activity.class); // 다음 넘어갈 클래스 지정
+                startActivity(i);
             }
         });
 
@@ -75,13 +95,7 @@ public class Main3Activity extends AppCompatActivity {
             }
         });
 
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                s1.setChecked(false);
-                l1.setVisibility(View.INVISIBLE);
-            }
-        });
+
     }
 
 }
