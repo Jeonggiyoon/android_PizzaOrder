@@ -36,12 +36,15 @@ public class Main3Activity extends AppCompatActivity {
 
         l1.setVisibility(View.INVISIBLE);
 
-        s1.setOnClickListener(new View.OnClickListener() {
+        s1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                l1.setVisibility(View.VISIBLE);
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) l1.setVisibility(View.VISIBLE);
+                else
+                    l1.setVisibility(View.INVISIBLE);
             }
         });
+
 
 
         b1.setOnClickListener(new View.OnClickListener() {
