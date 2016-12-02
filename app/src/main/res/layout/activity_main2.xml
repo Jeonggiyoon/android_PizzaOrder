@@ -38,32 +38,24 @@
             >
 
             <RadioButton
-                android:text="RadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton1"
-                android:layout_weight="1" />
+                android:text="비글" />
 
             <RadioButton
-                android:text="RadioButton"
+                android:text="리트리버"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton2"
-                android:layout_weight="1" />
+                />
 
             <RadioButton
-                android:text="RadioButton"
+                android:text="시바 "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton3"
-                android:layout_weight="1" />
-
-            <Button
-                android:text="Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/button7"
-                android:layout_weight="1" />
+                 />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -72,6 +64,19 @@
                 android:id="@+id/imageView1"
                 android:layout_weight="1" />
 
+            <Button
+                android:text="선택완료 "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button7"
+                />
+
+            <Button
+                android:text="Next Page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button8"
+                android:layout_weight="1" />
 
         </RadioGroup>
     </LinearLayout>
